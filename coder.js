@@ -3,9 +3,9 @@ let mode = process.argv[2]; input = process.argv[3]; output = process.argv[4];
 const fs = require("fs");
 
 if (mode == "to_code") {
-    string = fs.readFileSync(input, "utf8") + " ";
-    encoded_String = "";
-    counter = [string[0], 1];
+    let string = fs.readFileSync(input, "utf8") + " ";
+    let encoded_String = "";
+    let counter = [string[0], 1];
     for (i = 1; i < string.length; i++) {
         if (string[i] == counter[0]) {
             if (counter[1] + 1 == 256) {
@@ -29,8 +29,8 @@ if (mode == "to_code") {
     console.log(encoded_String)
 }
 if (mode == "to_decode") {
-    string = fs.readFileSync(input, "utf8");
-    decoded_String = "";
+    let string = fs.readFileSync(input, "utf8");
+    let decoded_String = "";
     for (i = 0; i < string.length; i++) {
         if (string[i] == "#") {
             decoded_String += string[i+2].repeat(string[i+1].charCodeAt(0));
