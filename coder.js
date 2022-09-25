@@ -8,8 +8,8 @@ if (mode == "to_code") {
     let counter = [string[0], 1];
     for (i = 1; i < string.length; i++) {
         if (string[i] == counter[0]) {
-            if (counter[1] + 1 == 256) {
-                encoded_String += "#" + String.fromCharCode(255) + counter[0];
+            if (counter[1] + 1 == 258) {
+                encoded_String += "#" + String.fromCharCode(258) + counter[0];
                 counter[1] = 1;
             }
             else counter[1]++;
