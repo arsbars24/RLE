@@ -41,3 +41,5 @@ if (mode == "to_decode") {
     fs.writeFile(output, decoded_String, function(error) { if(error) throw error; });
     console.log(decoded_String);
 }
+// файлы, которые надо указать в аргументах, необходимо размещать в той же директории
+// причём код требует 2 файла: один на вход строки, а другую на выход
